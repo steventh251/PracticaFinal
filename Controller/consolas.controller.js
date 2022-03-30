@@ -10,12 +10,12 @@ consolasController.getConsolas = async (req, res) => {
 consolasController.addConsolas = async (req, res) => {
   const consolas = new consolasModel(req.body);
   await consolas.save();
-  res.json({'status': 'se guardo exitosamente'});
+  res.json({'status': 'se guardo satisfactoriamente'});
 };
 
 consolasController.deleteConsolas = async (req, res) => {
   await consolasModel.findByIdAndDelete (req.params.id);
-  res.json({'status': 'error no se guardo'});
+  res.json({'status': 'se elimino la consola'});
 };
 
 module.exports = consolasController;
